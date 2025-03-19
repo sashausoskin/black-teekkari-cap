@@ -1,0 +1,26 @@
+(function (Drupal) {
+  Drupal.behaviors.aalto_notification = {
+    attach: function (context, settings) {
+      var notifications = [].slice.call(document.querySelectorAll('.aalto-notification')); // Needs to be an array instead of NodeList for forEach to work in old Edge and IE 11.
+
+      if (notifications.length) {
+        notifications.forEach(function(notification) {
+          notification.addEventListener('transitionend', hideNotification);
+        });
+      }
+    },
+
+    showNotification: function (container, notificationText) {
+      var notification = container.querySelector('.aalto-notification');
+      var notificationText = notificationText || notification.textContent; // If notificationText parameter is not given, let's use the text set in html.
+      notification.textContent = ''; // Clear the info text and add it again to get better screen reader support: all screenreaders don't reed live regions when only visibility is toggled.
+      notification.textContent = notificationText;
+      notification.classList.remove('aalto-notification--hidden');
+    },
+  }
+
+  function hideNotification(e) {
+    var notification = e.currentTarget;
+    notification.classList.add('aalto-notification--hidden');
+  }
+})(Drupal);
