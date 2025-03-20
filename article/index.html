@@ -150,6 +150,20 @@
       }
     </style>
     <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style>
+    <style>
+      .container-chevron {
+          display: flex;
+          align-items: center; /* Align text and chevron */
+          gap: 1px; /* Space between text and chevron */
+          font-size: 16px;
+          cursor: pointer; /* Optional: makes it look clickable */
+      }
+
+      .chevron {
+          width: 12px; /* Adjust size */
+          height: 12px;
+      }
+  </style>
   </head>
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7PX5LV"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -254,7 +268,14 @@
                         <ul class="aalto-menu__navigation-items aalto-list-unstyled">
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">Services for members</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">Services for members</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/services-for-members" class="aalto-dropdown__link" data-drupal-link-system-path="node/341">Services for members</a></li>
                                 <li><a href="https://www.ayy.fi/en/rent-facilities-or-van" class="aalto-dropdown__link" data-drupal-link-system-path="node/441">Rent a facility or van</a></li>
@@ -265,7 +286,14 @@
                           </li>
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">Housing</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">Housing</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/housing" class="aalto-dropdown__link" data-drupal-link-system-path="node/361">Housing</a></li>
                                 <li><a href="https://www.ayy.fi/en/housing#2-for-tenants" class="aalto-dropdown__link">For tenants</a></li>
@@ -276,7 +304,14 @@
                           </li>
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">Student activities</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">Student activities</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/list-of-associations" class="aalto-dropdown__link" data-drupal-link-system-path="node/1481">List of associations</a></li>
                                 <li><a href="https://www.ayy.fi/en/for-associations" class="aalto-dropdown__link" data-drupal-link-system-path="node/1241">For associations</a></li>
@@ -290,7 +325,14 @@
                           </li>
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">What is AYY?</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">What is AYY?</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/news-and-events" class="aalto-dropdown__link" data-drupal-link-system-path="node/2371">News</a></li>
                                 <li><a href="https://www.ayy.fi/en/your-student-union" class="aalto-dropdown__link" data-drupal-link-system-path="node/1236">Your student union</a></li>
@@ -305,7 +347,14 @@
                           </li>
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">TTE Fund</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">TTE Fund</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/tter" class="aalto-dropdown__link">TTE Fund</a></li>
                                 <li><a href="https://www.ayy.fi/en/tter-apply-for-a-grant" class="aalto-dropdown__link">Apply for a grant</a></li>
@@ -316,7 +365,14 @@
                           </li>
                           <li class="aalto-menu__navigation-item">
                             <div class="aalto-dropdown-container js-menu-container aalto-dropdown_container--nav" data-mq="(min-width: 900px)">
-                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron"><span class="aalto-dropdown__toggle-text " aria-hidden="false">Contact</span></button>
+                              <button type="button" aria-expanded="false" class="js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle">
+                                <div class="container-chevron">
+                                  <span class="aalto-dropdown__toggle-text " aria-hidden="false">Contact</span>
+                                    <span class="chevron">
+                                      <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                                    </span>
+                                </div>
+                              </button>
                               <ul class="aalto-list-unstyled aalto-dropdown__menu">
                                 <li><a href="https://www.ayy.fi/en/contact-information" class="aalto-dropdown__link" data-drupal-link-system-path="node/1101">Contact information</a></li>
                                 <li><a href="https://www.ayy.fi/en/ayy-service-office" class="aalto-dropdown__link" data-drupal-link-system-path="node/751">AYY services office</a></li>
@@ -334,7 +390,7 @@
                             <img class="aalto-inline-icon"src="./index_files/icons.svg#16-globe"/>
                             <span class="aalto-menu__action-toggle-text">in English</span>
                             </span>
-                            <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="index_files/icons.svg#16-arrow_chevron_up"></svg>
+                            <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
                             </button>
                             <ul class="aalto-menu__action-submenu aalto-menu__language-list aalto-list-unstyled">
                               <li class="aalto-menu__language-list-link-container">
