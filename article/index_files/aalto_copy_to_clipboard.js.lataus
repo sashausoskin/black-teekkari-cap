@@ -1,24 +1,23 @@
-(function(Drupal) {
-  Drupal.behaviors.aalto_copy_to_clipboard = {
-    attach: function(context, settings) {
-      var copyUrlButtons = [].slice.call(document.querySelectorAll('.js-aalto-copy-url-button')); // Needs to be an array instead of NodeList for old Edge and IE 11.
-
-      if (copyUrlButtons.length) {
-        copyUrlButtons.forEach(function(button) {
-          button.addEventListener('click', copyUrl);
-        });
-      }
-    },
-  };
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var copyUrlButtons = Array.from(document.querySelectorAll(".js-aalto-copy-url-button"));
+    
+    if (copyUrlButtons.length) {
+      copyUrlButtons.forEach(function (button) {
+        button.addEventListener("click", copyUrl);
+      });
+    }
+  });
 
   function copyToClipboard(el) {
-    var originalReadOnly = el.readOnly; // For iOS. Store the original read only -value from the element.
-    el.readOnly = true; // iOS wants the field to be "read only" for not to scroll to it with el.select()
+    var originalReadOnly = el.readOnly;
+    el.readOnly = true;
     el.select();
-    el.setSelectionRange(0, 999999); // For iOS. Because it just won't have any selection to copy without this.
-    el.readOnly = originalReadOnly; // For iOS. Put back the original read only -value.
+    el.setSelectionRange(0, 999999);
+    el.readOnly = originalReadOnly;
+    
     try {
-      return document.execCommand('copy');
+      return document.execCommand("copy");
     } catch (err) {
       console.error(err);
       return false;
@@ -27,17 +26,21 @@
 
   function copyUrl(e) {
     var copyButton = e.currentTarget;
-    var container = copyButton.closest('.aalto-some-share');
-    var el = document.createElement('textarea');
-    el.classList.add('aalto-visually-hidden');
-    el.setAttribute('aria-hidden', true);
+    var container = copyButton.closest(".aalto-some-share");
+    var el = document.createElement("textarea");
+    el.classList.add("aalto-visually-hidden");
+    el.setAttribute("aria-hidden", true);
     el.value = window.location.href;
     document.body.appendChild(el);
+    
     var isSuccessful = copyToClipboard(el);
-    if (isSuccessful === true) {
-      Drupal.behaviors.aalto_notification.showNotification(container);
+    if (isSuccessful) {
+      if (typeof window.showNotification === "function") {
+        window.showNotification(container, "URL copied to clipboard!");
+      }
     }
-    copyButton.focus(); // Adding the fake element for selecting and copying the url loses focus. We need to set explicitly set the focus back to the copy url -button.
+    
+    copyButton.focus();
     document.body.removeChild(el);
   }
-})(Drupal);
+})();
