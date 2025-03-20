@@ -250,12 +250,14 @@
                       <div class="aalto-search__overlay" id="aalto-search-overlay"></div>
                     </div>
                     <nav class="aalto-menu" id="aalto-menu" aria-labelledby="aalto-menu-button-text">
-                      <button type="button" class="aalto-menu__button" id="aalto-menu-button" aria-expanded="false">
+                      <button type="button" class="aalto-menu__button js-menu-toggle aalto-dropdown__toggle aalto-dropdown__toggle--with_chevron aalto-menu__action-toggle" id="aalto-menu-button" aria-expanded="false">
                         <div class="aalto-menu__button-expand">
-                          <span class="aalto-menu__button-text" id="aalto-menu-button-text">Menu</span>
-                          <svg class="aalto-menu__button-icon aalto-menu__button-icon--menu">
-                            <use xlink:href="ayy.fi/themes/custom/aalto_ayy/images/icons.svg#16-menu_burger"></use>
-                          </svg>
+                          <div class="container-chevron">
+                            <span class="aalto-menu__button-text" id="aalto-menu-button-text">Menu</span>
+                              <span class="chevron">
+                                <img class="aalto-inline-icon aalto-menu__action-toggle-icon-chevron" src="./index_files/chevron.svg"></svg>
+                              </span>
+                          </div>
                         </div>
                         <div class="aalto-menu__button-collapse">
                           <span class="aalto-menu__button-text">Close</span>
